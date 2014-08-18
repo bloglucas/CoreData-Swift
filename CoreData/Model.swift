@@ -10,7 +10,28 @@ import Foundation
 import CoreData
 
 class Cidade: NSManagedObject {
+    
     @NSManaged var nome:String
+    
+    init(){
+        let entity:NSEntityDescription = DataManager.getEntity("Cidade")
+        super.init(entity: entity, insertIntoManagedObjectContext: nil)
+    }
+    
+    func salvar(){
+        let context:NSManagedObjectContext = DataManager.getContext()
+        var error:NSError?
+        
+        if (!self.inserted) {
+            context.insertObject(self)
+        }
+        
+        context.save(&error)
+        
+        if (error != nil){
+            NSLog(error!.description)
+        }
+    }
 }
 
 class Cadastro: NSManagedObject {
