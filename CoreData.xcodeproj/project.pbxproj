@@ -13,6 +13,9 @@
 		9D26981019A064C900E4FE03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D26980E19A064C900E4FE03 /* Main.storyboard */; };
 		9D26981219A064C900E4FE03 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D26981119A064C900E4FE03 /* Images.xcassets */; };
 		9D26981E19A064CA00E4FE03 /* CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D26981D19A064CA00E4FE03 /* CoreDataTests.swift */; };
+		9D26982C19A0664500E4FE03 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D26982B19A0664500E4FE03 /* Model.swift */; };
+		9D26982E19A066BC00E4FE03 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D26982D19A066BC00E4FE03 /* DataManager.swift */; };
+		9D26983019A0738300E4FE03 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D26982F19A0738300E4FE03 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		9D26981719A064CA00E4FE03 /* CoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D26981C19A064CA00E4FE03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D26981D19A064CA00E4FE03 /* CoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTests.swift; sourceTree = "<group>"; };
+		9D26982B19A0664500E4FE03 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		9D26982D19A066BC00E4FE03 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		9D26982F19A0738300E4FE03 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D26983019A0738300E4FE03 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +66,7 @@
 		9D2697F919A064C900E4FE03 = {
 			isa = PBXGroup;
 			children = (
+				9D26982F19A0738300E4FE03 /* CoreData.framework */,
 				9D26980419A064C900E4FE03 /* CoreData */,
 				9D26981A19A064CA00E4FE03 /* CoreDataTests */,
 				9D26980319A064C900E4FE03 /* Products */,
@@ -79,6 +87,8 @@
 			children = (
 				9D26980719A064C900E4FE03 /* AppDelegate.swift */,
 				9D26980C19A064C900E4FE03 /* ViewController.swift */,
+				9D26982B19A0664500E4FE03 /* Model.swift */,
+				9D26982D19A066BC00E4FE03 /* DataManager.swift */,
 				9D26980E19A064C900E4FE03 /* Main.storyboard */,
 				9D26981119A064C900E4FE03 /* Images.xcassets */,
 				9D26980919A064C900E4FE03 /* CoreData.xcdatamodeld */,
@@ -213,6 +223,8 @@
 			files = (
 				9D26980D19A064C900E4FE03 /* ViewController.swift in Sources */,
 				9D26980B19A064C900E4FE03 /* CoreData.xcdatamodeld in Sources */,
+				9D26982C19A0664500E4FE03 /* Model.swift in Sources */,
+				9D26982E19A066BC00E4FE03 /* DataManager.swift in Sources */,
 				9D26980819A064C900E4FE03 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,9 +341,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CoreData/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -340,6 +354,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CoreData/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -399,6 +414,7 @@
 				9D26982319A064CA00E4FE03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9D26982419A064CA00E4FE03 /* Build configuration list for PBXNativeTarget "CoreDataTests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +423,7 @@
 				9D26982619A064CA00E4FE03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
