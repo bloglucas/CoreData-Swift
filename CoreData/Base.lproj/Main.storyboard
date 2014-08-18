@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
+        <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,12 +19,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeW-b2-cRI">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Cadastrar Cidade">
+                                <state key="normal" title="Salvar">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="140" y="66" width="121" height="30"/>
-                                </variation>
                                 <connections>
                                     <action selector="salvarCidade:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="c4t-US-tqJ"/>
                                 </connections>
@@ -32,22 +30,40 @@
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="28" width="368" height="30"/>
-                                </variation>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="SeW-b2-cRI" secondAttribute="centerX" id="EnB-vg-HsC"/>
+                            <constraint firstItem="xyQ-SW-F49" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="M0b-Nm-q8d"/>
+                            <constraint firstItem="SeW-b2-cRI" firstAttribute="top" secondItem="xyQ-SW-F49" secondAttribute="bottom" constant="10" id="aLX-Au-MdC"/>
+                            <constraint firstItem="xyQ-SW-F49" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="gbK-Ab-u9X"/>
+                            <constraint firstItem="xyQ-SW-F49" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="kEU-Mj-PfO"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="SeW-b2-cRI"/>
                                 <exclude reference="xyQ-SW-F49"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="M0b-Nm-q8d"/>
+                                <exclude reference="gbK-Ab-u9X"/>
+                                <exclude reference="kEU-Mj-PfO"/>
+                                <exclude reference="EnB-vg-HsC"/>
+                                <exclude reference="aLX-Au-MdC"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="SeW-b2-cRI"/>
                                 <include reference="xyQ-SW-F49"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="M0b-Nm-q8d"/>
+                                <include reference="gbK-Ab-u9X"/>
+                                <include reference="kEU-Mj-PfO"/>
+                                <include reference="EnB-vg-HsC"/>
+                                <include reference="aLX-Au-MdC"/>
                             </mask>
                         </variation>
                     </view>
@@ -57,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="136"/>
+            <point key="canvasLocation" x="97.5" y="134"/>
         </scene>
     </scenes>
 </document>
