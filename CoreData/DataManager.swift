@@ -25,4 +25,25 @@ class DataManager {
         return delegate.managedObjectContext!
     }
     
+    class func getAllManagedObjectsFromEntity(entidade: String) -> (sucesso: Bool, objects:NSArray){
+        
+        let delegate = (UIApplication.sharedApplication()).delegate as AppDelegate
+        let context:NSManagedObjectContext? = delegate.managedObjectContext
+        let description:NSEntityDescription = NSEntityDescription.entityForName(entidade, inManagedObjectContext: context)
+        
+        let request:NSFetchRequest = NSFetchRequest()
+        request.entity = description
+        
+        var error:NSError?
+        var objects:NSArray? = context?.executeFetchRequest(request, error: &error)
+        
+        if(error == nil){
+            return(true, objects!)
+        }else{
+            NSLog(error!.description)
+            return(false, objects!)
+        }
+        
+    }
+    
 }

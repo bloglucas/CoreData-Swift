@@ -16,6 +16,7 @@
 		9D26982C19A0664500E4FE03 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D26982B19A0664500E4FE03 /* Model.swift */; };
 		9D26982E19A066BC00E4FE03 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D26982D19A066BC00E4FE03 /* DataManager.swift */; };
 		9D26983019A0738300E4FE03 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D26982F19A0738300E4FE03 /* CoreData.framework */; };
+		9DFD05EA19A2635200417FC9 /* ListaCidadeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFD05E919A2635200417FC9 /* ListaCidadeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		9D26982B19A0664500E4FE03 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		9D26982D19A066BC00E4FE03 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		9D26982F19A0738300E4FE03 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		9DFD05E919A2635200417FC9 /* ListaCidadeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaCidadeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		9D26980419A064C900E4FE03 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				9DFD05E919A2635200417FC9 /* ListaCidadeViewController.swift */,
 				9D26980719A064C900E4FE03 /* AppDelegate.swift */,
 				9D26980C19A064C900E4FE03 /* ViewController.swift */,
 				9D26982B19A0664500E4FE03 /* Model.swift */,
@@ -225,6 +228,7 @@
 				9D26980B19A064C900E4FE03 /* CoreData.xcdatamodeld in Sources */,
 				9D26982C19A0664500E4FE03 /* Model.swift in Sources */,
 				9D26982E19A066BC00E4FE03 /* DataManager.swift in Sources */,
+				9DFD05EA19A2635200417FC9 /* ListaCidadeViewController.swift in Sources */,
 				9D26980819A064C900E4FE03 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

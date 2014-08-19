@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
                             
@@ -24,7 +25,8 @@ class ViewController: UIViewController {
 
     @IBAction func salvarCidade(sender: AnyObject) {
         
-        var cidade:Cidade = Cidade()
+        let entity:NSEntityDescription = DataManager.getEntity("Cidade")
+        var cidade:Cidade = Cidade(entity: entity, insertIntoManagedObjectContext: nil)
         cidade.nome = nomeCidade.text
         cidade.salvar()
     }

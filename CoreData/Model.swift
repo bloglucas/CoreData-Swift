@@ -13,8 +13,12 @@ class Cidade: NSManagedObject {
     
     @NSManaged var nome:String
     
-    init(){
-        let entity:NSEntityDescription = DataManager.getEntity("Cidade")
+//    init(){
+//        let entity:NSEntityDescription = DataManager.getEntity("Cidade")
+//        super.init(entity: entity, insertIntoManagedObjectContext: nil)
+//    }
+    
+    override init(entity: NSEntityDescription!, insertIntoManagedObjectContext context: NSManagedObjectContext!) {
         super.init(entity: entity, insertIntoManagedObjectContext: nil)
     }
     
