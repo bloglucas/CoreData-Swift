@@ -51,9 +51,3 @@ class Cidade: NSManagedObject {
         }
     }
 }
-
-class Cadastro: NSManagedObject {
-    @NSManaged var nome:String
-    @NSManaged var telefone:NSNumber
-    @NSManaged var cidade:Cidade
-}
