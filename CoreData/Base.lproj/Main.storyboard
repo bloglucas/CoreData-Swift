@@ -2,174 +2,18 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Qt9-zG-0Nc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
-        <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
-            <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="CoreData" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeW-b2-cRI">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Salvar">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="salvarCidade:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="c4t-US-tqJ"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xyQ-SW-F49">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAj-qL-02a">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Voltar">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="181" y="99" width="39" height="30"/>
-                                </variation>
-                                <connections>
-                                    <segue destination="Qt9-zG-0Nc" kind="show" id="0Kh-wZ-11y"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="SeW-b2-cRI" secondAttribute="centerX" id="EnB-vg-HsC"/>
-                            <constraint firstItem="xyQ-SW-F49" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="M0b-Nm-q8d"/>
-                            <constraint firstItem="SeW-b2-cRI" firstAttribute="top" secondItem="xyQ-SW-F49" secondAttribute="bottom" constant="10" id="aLX-Au-MdC"/>
-                            <constraint firstItem="xyQ-SW-F49" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="gbK-Ab-u9X"/>
-                            <constraint firstItem="xyQ-SW-F49" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="kEU-Mj-PfO"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="SeW-b2-cRI"/>
-                                <exclude reference="xyQ-SW-F49"/>
-                                <exclude reference="pAj-qL-02a"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="M0b-Nm-q8d"/>
-                                <exclude reference="gbK-Ab-u9X"/>
-                                <exclude reference="kEU-Mj-PfO"/>
-                                <exclude reference="EnB-vg-HsC"/>
-                                <exclude reference="aLX-Au-MdC"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="SeW-b2-cRI"/>
-                                <include reference="xyQ-SW-F49"/>
-                                <include reference="pAj-qL-02a"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="M0b-Nm-q8d"/>
-                                <include reference="gbK-Ab-u9X"/>
-                                <include reference="kEU-Mj-PfO"/>
-                                <include reference="EnB-vg-HsC"/>
-                                <include reference="aLX-Au-MdC"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <connections>
-                        <outlet property="nomeCidade" destination="xyQ-SW-F49" id="yXW-uc-F0z"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-337.5" y="-175"/>
-        </scene>
-        <!--Lista Cidade View Controller-->
-        <scene sceneID="obo-PG-dru">
-            <objects>
-                <viewController id="uD9-SE-hRY" customClass="ListaCidadeViewController" customModule="CoreData" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ux6-tQ-HZc"/>
-                        <viewControllerLayoutGuide type="bottom" id="F4T-qR-rAk"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="uG1-hU-rL0">
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMU-O1-B1u">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Voltar">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Qt9-zG-0Nc" kind="show" id="wjw-Jg-Fdb"/>
-                                </connections>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="6yu-hW-ez4">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="uD9-SE-hRY" id="zgC-5N-lZ4"/>
-                                    <outlet property="delegate" destination="uD9-SE-hRY" id="Lf4-ve-bKC"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="CMU-O1-B1u" firstAttribute="leading" secondItem="uG1-hU-rL0" secondAttribute="leadingMargin" id="Cm8-3e-Utu"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="6yu-hW-ez4" secondAttribute="trailing" constant="-16" id="aUf-Jp-wH9"/>
-                            <constraint firstItem="CMU-O1-B1u" firstAttribute="top" secondItem="Ux6-tQ-HZc" secondAttribute="bottom" id="eLc-xT-A9T"/>
-                            <constraint firstItem="6yu-hW-ez4" firstAttribute="leading" secondItem="uG1-hU-rL0" secondAttribute="leadingMargin" constant="-16" id="jMe-fE-crE"/>
-                            <constraint firstItem="F4T-qR-rAk" firstAttribute="top" secondItem="6yu-hW-ez4" secondAttribute="bottom" id="oeY-0a-u4O"/>
-                            <constraint firstItem="6yu-hW-ez4" firstAttribute="top" secondItem="CMU-O1-B1u" secondAttribute="bottom" constant="8" id="sno-re-Xwz"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="CMU-O1-B1u"/>
-                                <exclude reference="6yu-hW-ez4"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="Cm8-3e-Utu"/>
-                                <exclude reference="eLc-xT-A9T"/>
-                                <exclude reference="aUf-Jp-wH9"/>
-                                <exclude reference="jMe-fE-crE"/>
-                                <exclude reference="sno-re-Xwz"/>
-                                <exclude reference="oeY-0a-u4O"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="CMU-O1-B1u"/>
-                                <include reference="6yu-hW-ez4"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="Cm8-3e-Utu"/>
-                                <include reference="eLc-xT-A9T"/>
-                                <include reference="aUf-Jp-wH9"/>
-                                <include reference="jMe-fE-crE"/>
-                                <include reference="sno-re-Xwz"/>
-                                <include reference="oeY-0a-u4O"/>
-                            </mask>
-                        </variation>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wp2-bY-pzN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-337.5" y="575"/>
-        </scene>
-        <!--View Controller-->
         <scene sceneID="Mmq-QX-QXf">
             <objects>
-                <viewController id="Qt9-zG-0Nc" sceneMemberID="viewController">
+                <viewController id="Qt9-zG-0Nc" customClass="ViewController" customModule="CoreData" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Fzu-kx-1Bh"/>
                         <viewControllerLayoutGuide type="bottom" id="fEJ-nB-PS2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QjG-j8-gog">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cidade" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qkt-HT-xqY">
@@ -184,7 +28,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="show" id="YvZ-TC-Qm4"/>
+                                    <action selector="salvarCidade:" destination="Qt9-zG-0Nc" eventType="touchUpInside" id="Dxb-Iy-wz5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rT-aP-5uK">
@@ -193,15 +37,40 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="uD9-SE-hRY" kind="show" id="qXD-iE-hav"/>
+                                    <action selector="consultarCidades:" destination="Qt9-zG-0Nc" eventType="touchUpInside" id="Ra8-u8-94V"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFe-EG-f8w">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Alterar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="alterar:" destination="Qt9-zG-0Nc" eventType="touchUpInside" id="h0P-no-Cow"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMk-cz-YGL">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Excluir">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="178" y="138" width="47" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="excluir" destination="Qt9-zG-0Nc" eventType="touchUpInside" id="T2I-dz-Iuz"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="XMk-cz-YGL" firstAttribute="top" secondItem="8rT-aP-5uK" secondAttribute="bottom" constant="24" id="9c3-m1-slG"/>
                             <constraint firstItem="8rT-aP-5uK" firstAttribute="top" secondItem="Qkt-HT-xqY" secondAttribute="bottom" constant="35" id="QP3-h0-yd4"/>
+                            <constraint firstItem="dFe-EG-f8w" firstAttribute="top" secondItem="fqi-8x-NFo" secondAttribute="bottom" constant="25" id="Uhx-Lb-prX"/>
                             <constraint firstItem="fqi-8x-NFo" firstAttribute="top" secondItem="Qkt-HT-xqY" secondAttribute="bottom" constant="7" id="bHM-uI-UrE"/>
+                            <constraint firstAttribute="centerX" secondItem="dFe-EG-f8w" secondAttribute="centerX" id="dLt-R4-ETs"/>
                             <constraint firstItem="Qkt-HT-xqY" firstAttribute="top" secondItem="Fzu-kx-1Bh" secondAttribute="bottom" constant="8" id="e3n-B7-4FJ"/>
+                            <constraint firstAttribute="centerX" secondItem="XMk-cz-YGL" secondAttribute="centerX" id="ebM-Xv-BQH"/>
                             <constraint firstAttribute="centerX" secondItem="Qkt-HT-xqY" secondAttribute="centerX" id="iWP-rL-1Qb"/>
                             <constraint firstItem="Qkt-HT-xqY" firstAttribute="centerX" secondItem="8rT-aP-5uK" secondAttribute="centerX" id="lWf-yC-M7N"/>
                             <constraint firstItem="Qkt-HT-xqY" firstAttribute="centerX" secondItem="fqi-8x-NFo" secondAttribute="centerX" id="zr1-Ur-edx"/>
@@ -211,6 +80,8 @@
                                 <exclude reference="Qkt-HT-xqY"/>
                                 <exclude reference="fqi-8x-NFo"/>
                                 <exclude reference="8rT-aP-5uK"/>
+                                <exclude reference="dFe-EG-f8w"/>
+                                <exclude reference="XMk-cz-YGL"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="e3n-B7-4FJ"/>
@@ -219,6 +90,10 @@
                                 <exclude reference="zr1-Ur-edx"/>
                                 <exclude reference="QP3-h0-yd4"/>
                                 <exclude reference="bHM-uI-UrE"/>
+                                <exclude reference="Uhx-Lb-prX"/>
+                                <exclude reference="dLt-R4-ETs"/>
+                                <exclude reference="9c3-m1-slG"/>
+                                <exclude reference="ebM-Xv-BQH"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -226,6 +101,8 @@
                                 <include reference="Qkt-HT-xqY"/>
                                 <include reference="fqi-8x-NFo"/>
                                 <include reference="8rT-aP-5uK"/>
+                                <include reference="dFe-EG-f8w"/>
+                                <include reference="XMk-cz-YGL"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="e3n-B7-4FJ"/>
@@ -234,16 +111,17 @@
                                 <include reference="zr1-Ur-edx"/>
                                 <include reference="QP3-h0-yd4"/>
                                 <include reference="bHM-uI-UrE"/>
+                                <include reference="Uhx-Lb-prX"/>
+                                <include reference="dLt-R4-ETs"/>
+                                <include reference="9c3-m1-slG"/>
+                                <include reference="ebM-Xv-BQH"/>
                             </mask>
                         </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cuf-ZA-3E0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1222.5" y="162"/>
+            <point key="canvasLocation" x="-1467" y="94"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="wjw-Jg-Fdb"/>
-    </inferredMetricsTieBreakers>
 </document>

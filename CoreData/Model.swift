@@ -13,20 +13,34 @@ class Cidade: NSManagedObject {
     
     @NSManaged var nome:String
     
-//    init(){
-//        let entity:NSEntityDescription = DataManager.getEntity("Cidade")
-//        super.init(entity: entity, insertIntoManagedObjectContext: nil)
-//    }
-    
     override init(entity: NSEntityDescription!, insertIntoManagedObjectContext context: NSManagedObjectContext!) {
         super.init(entity: entity, insertIntoManagedObjectContext: nil)
     }
     
-    func salvar(){
+    class func entityDescription() -> (desc:NSEntityDescription){
+        let entity:NSEntityDescription = DataManager.getEntity("Cidade")
+        return entity
+    }
+    
+    func delete(){
+        
         let context:NSManagedObjectContext = DataManager.getContext()
         var error:NSError?
         
-        if (!self.inserted) {
+        context.deleteObject(self)
+        context.save(&error)
+        
+        if (error != nil){
+            NSLog(error!.description)
+        }
+    }
+    
+    func salvar(){
+        
+        let context:NSManagedObjectContext = DataManager.getContext()
+        var error:NSError?
+        
+        if (self.managedObjectContext == nil) {
             context.insertObject(self)
         }
         
