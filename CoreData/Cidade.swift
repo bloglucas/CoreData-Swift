@@ -17,7 +17,7 @@ class Cidade: NSManagedObject {
         super.init(entity: entity, insertIntoManagedObjectContext: nil)
     }
     
-    class func entityDescription() -> (desc:NSEntityDescription){
+    class func entityDescription() -> (NSEntityDescription){
         let entity:NSEntityDescription = DataManager.getEntity("Cidade")
         return entity
     }

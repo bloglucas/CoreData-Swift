@@ -12,7 +12,7 @@ import UIKit
 
 class DataManager {
     
-    class func getEntity(entidade: String) -> (obj:NSEntityDescription){
+    class func getEntity(entidade: String) -> (NSEntityDescription){
         let delegate = (UIApplication.sharedApplication()).delegate as AppDelegate
         let context:NSManagedObjectContext? = delegate.managedObjectContext
         let description:NSEntityDescription = NSEntityDescription.entityForName(entidade, inManagedObjectContext: context)
@@ -20,7 +20,7 @@ class DataManager {
         return description
     }
     
-    class func getContext () -> (context:NSManagedObjectContext) {
+    class func getContext () -> (NSManagedObjectContext) {
         let delegate = (UIApplication.sharedApplication()).delegate as AppDelegate
         return delegate.managedObjectContext!
     }

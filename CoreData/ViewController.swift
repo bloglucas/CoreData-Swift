@@ -10,6 +10,52 @@ import UIKit
 import CoreData
 
 class ViewController: UIViewController {
+    
+    @IBAction func incluirCadastro(){
+        
+        var retorno = DataManager.getAllManagedObjectsFromEntity(Cidade.entityDescription())
+        var cidade:Cidade?
+        var cadastro:Cadastro = Cadastro(entity: Cadastro.entityDescription(), insertIntoManagedObjectContext: DataManager.getContext())
+        cadastro.salvar()
+        
+        if(retorno.sucesso){
+            cidade = retorno.objects.objectAtIndex(0) as? Cidade
+        }
+        
+        cadastro.nome = "Lucas"
+        cadastro.telefone = NSNumber(integer: 6181339520)
+        cadastro.cidade = cidade
+        cadastro.salvar()
+        
+    }
+    
+    @IBAction func consultarCadastros() {
+        
+        var retorno = DataManager.getAllManagedObjectsFromEntity(Cadastro.entityDescription())
+        if (retorno.sucesso){
+            
+            if(retorno.objects.count == 0){
+                NSLog("Não existem registros")
+            }else{
+                for obj in retorno.objects as [Cadastro]{
+                    obj as Cadastro
+                    NSLog("Nome do Cadastro: \(obj.nome)")
+                    NSLog("Telefone do Cadstro: \(obj.telefone)")
+
+                    if let cidade = obj.cidade {
+                        NSLog("Cidade do Cadastro: \(cidade.nome)")
+                    }else{
+                        NSLog("Sem Cidade")
+                    }
+                    NSLog("---------")
+                }
+            }
+            
+        }else{
+            NSLog("Erro ao buscar cadastros")
+        }
+        
+    }
 
     @IBAction func salvarCidade(sender: AnyObject) {
         
@@ -40,7 +86,7 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func excluir(){
+    @IBAction func excluirCidade(){
         var retorno = DataManager.getAllManagedObjectsFromEntity(Cidade.entityDescription())
         if (retorno.sucesso && retorno.objects.count > 0){
             
@@ -50,7 +96,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func alterar(sender: AnyObject) {
+    @IBAction func alterarCidade(sender: AnyObject) {
         
         var retorno = DataManager.getAllManagedObjectsFromEntity(Cidade.entityDescription())
         if (retorno.sucesso && retorno.objects.count > 0){

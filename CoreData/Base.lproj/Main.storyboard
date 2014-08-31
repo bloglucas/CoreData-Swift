@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Qt9-zG-0Nc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Qt9-zG-0Nc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -46,7 +46,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="alterar:" destination="Qt9-zG-0Nc" eventType="touchUpInside" id="h0P-no-Cow"/>
+                                    <action selector="alterarCidade:" destination="Qt9-zG-0Nc" eventType="touchUpInside" id="YM3-Zk-T4c"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMk-cz-YGL">
@@ -54,25 +54,53 @@
                                 <state key="normal" title="Excluir">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="178" y="138" width="47" height="30"/>
-                                </variation>
                                 <connections>
-                                    <action selector="excluir" destination="Qt9-zG-0Nc" eventType="touchUpInside" id="T2I-dz-Iuz"/>
+                                    <action selector="excluirCidade" destination="Qt9-zG-0Nc" eventType="touchUpInside" id="rCZ-lx-ELr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cadastro" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4z-23-20p">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwp-Rb-fRx">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Incluir">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="incluirCadastro" destination="Qt9-zG-0Nc" eventType="touchUpInside" id="w5c-jE-hdf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ipg-aS-7Ia">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Consultar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="consultarCadastros" destination="Qt9-zG-0Nc" eventType="touchUpInside" id="RJS-PG-PsL"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="n4z-23-20p" secondAttribute="centerX" id="079-xs-4oG"/>
+                            <constraint firstAttribute="centerX" secondItem="hwp-Rb-fRx" secondAttribute="centerX" id="3ab-Zz-77h"/>
                             <constraint firstItem="XMk-cz-YGL" firstAttribute="top" secondItem="8rT-aP-5uK" secondAttribute="bottom" constant="24" id="9c3-m1-slG"/>
                             <constraint firstItem="8rT-aP-5uK" firstAttribute="top" secondItem="Qkt-HT-xqY" secondAttribute="bottom" constant="35" id="QP3-h0-yd4"/>
                             <constraint firstItem="dFe-EG-f8w" firstAttribute="top" secondItem="fqi-8x-NFo" secondAttribute="bottom" constant="25" id="Uhx-Lb-prX"/>
+                            <constraint firstItem="Ipg-aS-7Ia" firstAttribute="top" secondItem="n4z-23-20p" secondAttribute="bottom" constant="37" id="Vg8-BG-l14"/>
                             <constraint firstItem="fqi-8x-NFo" firstAttribute="top" secondItem="Qkt-HT-xqY" secondAttribute="bottom" constant="7" id="bHM-uI-UrE"/>
                             <constraint firstAttribute="centerX" secondItem="dFe-EG-f8w" secondAttribute="centerX" id="dLt-R4-ETs"/>
                             <constraint firstItem="Qkt-HT-xqY" firstAttribute="top" secondItem="Fzu-kx-1Bh" secondAttribute="bottom" constant="8" id="e3n-B7-4FJ"/>
                             <constraint firstAttribute="centerX" secondItem="XMk-cz-YGL" secondAttribute="centerX" id="ebM-Xv-BQH"/>
                             <constraint firstAttribute="centerX" secondItem="Qkt-HT-xqY" secondAttribute="centerX" id="iWP-rL-1Qb"/>
                             <constraint firstItem="Qkt-HT-xqY" firstAttribute="centerX" secondItem="8rT-aP-5uK" secondAttribute="centerX" id="lWf-yC-M7N"/>
+                            <constraint firstAttribute="centerX" secondItem="Ipg-aS-7Ia" secondAttribute="centerX" id="nLQ-TI-JpT"/>
+                            <constraint firstItem="hwp-Rb-fRx" firstAttribute="top" secondItem="n4z-23-20p" secondAttribute="bottom" constant="8" id="pE4-ty-Crx"/>
+                            <constraint firstItem="Ipg-aS-7Ia" firstAttribute="top" secondItem="hwp-Rb-fRx" secondAttribute="bottom" constant="8" id="q4e-gO-ouf"/>
+                            <constraint firstItem="n4z-23-20p" firstAttribute="top" secondItem="XMk-cz-YGL" secondAttribute="bottom" constant="24" id="zUG-dT-n5j"/>
                             <constraint firstItem="Qkt-HT-xqY" firstAttribute="centerX" secondItem="fqi-8x-NFo" secondAttribute="centerX" id="zr1-Ur-edx"/>
                         </constraints>
                         <variation key="default">
@@ -82,18 +110,28 @@
                                 <exclude reference="8rT-aP-5uK"/>
                                 <exclude reference="dFe-EG-f8w"/>
                                 <exclude reference="XMk-cz-YGL"/>
+                                <exclude reference="n4z-23-20p"/>
+                                <exclude reference="hwp-Rb-fRx"/>
+                                <exclude reference="Ipg-aS-7Ia"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="e3n-B7-4FJ"/>
                                 <exclude reference="iWP-rL-1Qb"/>
                                 <exclude reference="lWf-yC-M7N"/>
                                 <exclude reference="zr1-Ur-edx"/>
+                                <exclude reference="079-xs-4oG"/>
+                                <exclude reference="zUG-dT-n5j"/>
                                 <exclude reference="QP3-h0-yd4"/>
-                                <exclude reference="bHM-uI-UrE"/>
-                                <exclude reference="Uhx-Lb-prX"/>
-                                <exclude reference="dLt-R4-ETs"/>
+                                <exclude reference="Vg8-BG-l14"/>
+                                <exclude reference="nLQ-TI-JpT"/>
+                                <exclude reference="q4e-gO-ouf"/>
                                 <exclude reference="9c3-m1-slG"/>
                                 <exclude reference="ebM-Xv-BQH"/>
+                                <exclude reference="Uhx-Lb-prX"/>
+                                <exclude reference="dLt-R4-ETs"/>
+                                <exclude reference="bHM-uI-UrE"/>
+                                <exclude reference="3ab-Zz-77h"/>
+                                <exclude reference="pE4-ty-Crx"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -103,25 +141,35 @@
                                 <include reference="8rT-aP-5uK"/>
                                 <include reference="dFe-EG-f8w"/>
                                 <include reference="XMk-cz-YGL"/>
+                                <include reference="n4z-23-20p"/>
+                                <include reference="hwp-Rb-fRx"/>
+                                <include reference="Ipg-aS-7Ia"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="e3n-B7-4FJ"/>
                                 <include reference="iWP-rL-1Qb"/>
                                 <include reference="lWf-yC-M7N"/>
                                 <include reference="zr1-Ur-edx"/>
+                                <include reference="079-xs-4oG"/>
+                                <include reference="zUG-dT-n5j"/>
                                 <include reference="QP3-h0-yd4"/>
-                                <include reference="bHM-uI-UrE"/>
-                                <include reference="Uhx-Lb-prX"/>
-                                <include reference="dLt-R4-ETs"/>
+                                <include reference="Vg8-BG-l14"/>
+                                <include reference="nLQ-TI-JpT"/>
+                                <include reference="q4e-gO-ouf"/>
                                 <include reference="9c3-m1-slG"/>
                                 <include reference="ebM-Xv-BQH"/>
+                                <include reference="Uhx-Lb-prX"/>
+                                <include reference="dLt-R4-ETs"/>
+                                <include reference="bHM-uI-UrE"/>
+                                <include reference="3ab-Zz-77h"/>
+                                <include reference="pE4-ty-Crx"/>
                             </mask>
                         </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cuf-ZA-3E0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1467" y="94"/>
+            <point key="canvasLocation" x="-1723.5" y="52"/>
         </scene>
     </scenes>
 </document>
