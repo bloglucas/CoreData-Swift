@@ -60,7 +60,7 @@ class ViewController: UIViewController {
     @IBAction func salvarCidade(sender: AnyObject) {
         
         var cidade:Cidade = Cidade(entity: Cidade.entityDescription(), insertIntoManagedObjectContext: nil)
-        cidade.nome = "Nome da Cidade"
+        cidade.nome = "São Paulo"
         cidade.salvar()
         
         NSLog("Cidade salva")
