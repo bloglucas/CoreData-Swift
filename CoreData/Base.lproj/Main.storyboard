@@ -82,12 +82,31 @@
                                     <action selector="consultarCadastros" destination="Qt9-zG-0Nc" eventType="touchUpInside" id="RJS-PG-PsL"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Predicate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xE-I6-4ZE">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hd3-3h-D97">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Pesquisa Rio">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pesquisarCidade" destination="Qt9-zG-0Nc" eventType="touchUpInside" id="N2M-z9-q3l"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="n4z-23-20p" secondAttribute="centerX" id="079-xs-4oG"/>
                             <constraint firstAttribute="centerX" secondItem="hwp-Rb-fRx" secondAttribute="centerX" id="3ab-Zz-77h"/>
+                            <constraint firstItem="0xE-I6-4ZE" firstAttribute="top" secondItem="Ipg-aS-7Ia" secondAttribute="bottom" constant="9" id="7af-io-Wq4"/>
                             <constraint firstItem="XMk-cz-YGL" firstAttribute="top" secondItem="8rT-aP-5uK" secondAttribute="bottom" constant="24" id="9c3-m1-slG"/>
+                            <constraint firstItem="hd3-3h-D97" firstAttribute="top" secondItem="0xE-I6-4ZE" secondAttribute="bottom" constant="8" id="G3p-u1-Lwb"/>
+                            <constraint firstAttribute="centerX" secondItem="0xE-I6-4ZE" secondAttribute="centerX" id="Inw-pq-Ddd"/>
+                            <constraint firstAttribute="centerX" secondItem="hd3-3h-D97" secondAttribute="centerX" id="M6i-8f-Ctw"/>
                             <constraint firstItem="8rT-aP-5uK" firstAttribute="top" secondItem="Qkt-HT-xqY" secondAttribute="bottom" constant="35" id="QP3-h0-yd4"/>
                             <constraint firstItem="dFe-EG-f8w" firstAttribute="top" secondItem="fqi-8x-NFo" secondAttribute="bottom" constant="25" id="Uhx-Lb-prX"/>
                             <constraint firstItem="Ipg-aS-7Ia" firstAttribute="top" secondItem="n4z-23-20p" secondAttribute="bottom" constant="37" id="Vg8-BG-l14"/>
@@ -113,8 +132,12 @@
                                 <exclude reference="n4z-23-20p"/>
                                 <exclude reference="hwp-Rb-fRx"/>
                                 <exclude reference="Ipg-aS-7Ia"/>
+                                <exclude reference="0xE-I6-4ZE"/>
+                                <exclude reference="hd3-3h-D97"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="7af-io-Wq4"/>
+                                <exclude reference="Inw-pq-Ddd"/>
                                 <exclude reference="e3n-B7-4FJ"/>
                                 <exclude reference="iWP-rL-1Qb"/>
                                 <exclude reference="lWf-yC-M7N"/>
@@ -130,6 +153,8 @@
                                 <exclude reference="Uhx-Lb-prX"/>
                                 <exclude reference="dLt-R4-ETs"/>
                                 <exclude reference="bHM-uI-UrE"/>
+                                <exclude reference="G3p-u1-Lwb"/>
+                                <exclude reference="M6i-8f-Ctw"/>
                                 <exclude reference="3ab-Zz-77h"/>
                                 <exclude reference="pE4-ty-Crx"/>
                             </mask>
@@ -144,8 +169,12 @@
                                 <include reference="n4z-23-20p"/>
                                 <include reference="hwp-Rb-fRx"/>
                                 <include reference="Ipg-aS-7Ia"/>
+                                <include reference="0xE-I6-4ZE"/>
+                                <include reference="hd3-3h-D97"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="7af-io-Wq4"/>
+                                <include reference="Inw-pq-Ddd"/>
                                 <include reference="e3n-B7-4FJ"/>
                                 <include reference="iWP-rL-1Qb"/>
                                 <include reference="lWf-yC-M7N"/>
@@ -161,6 +190,8 @@
                                 <include reference="Uhx-Lb-prX"/>
                                 <include reference="dLt-R4-ETs"/>
                                 <include reference="bHM-uI-UrE"/>
+                                <include reference="G3p-u1-Lwb"/>
+                                <include reference="M6i-8f-Ctw"/>
                                 <include reference="3ab-Zz-77h"/>
                                 <include reference="pE4-ty-Crx"/>
                             </mask>

@@ -29,6 +29,30 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func pesquisarCidade(){
+        
+        var format:String = "nome LIKE %@"
+        var arguments:NSArray = ["Rio"]
+        var predicate:NSPredicate = NSPredicate(format: format, argumentArray: arguments)
+        
+        var retorno = DataManager.getManagedObjectsFromEntity(Cidade.entityDescription(), predicate: predicate)
+        if (retorno.sucesso){
+            
+            if(retorno.objects.count == 0){
+                NSLog("Não existem registros")
+            }else{
+                for obj in retorno.objects as [Cidade]{
+                    obj as Cidade
+                    NSLog("Nome da cidade: \(obj.nome)")
+                }
+            }
+            
+        }else{
+            NSLog("Erro ao buscar cidades")
+        }
+        
+    }
+    
     @IBAction func consultarCadastros() {
         
         var retorno = DataManager.getAllManagedObjectsFromEntity(Cadastro.entityDescription())
@@ -60,7 +84,7 @@ class ViewController: UIViewController {
     @IBAction func salvarCidade(sender: AnyObject) {
         
         var cidade:Cidade = Cidade(entity: Cidade.entityDescription(), insertIntoManagedObjectContext: nil)
-        cidade.nome = "São Paulo"
+        cidade.nome = "Rio"
         cidade.salvar()
         
         NSLog("Cidade salva")

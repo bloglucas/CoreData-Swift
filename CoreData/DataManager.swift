@@ -25,13 +25,13 @@ class DataManager {
         return delegate.managedObjectContext!
     }
     
-    class func getAllManagedObjectsFromEntity(description: NSEntityDescription) -> (sucesso: Bool, objects:NSArray){
+    class func getAllManagedObjectsFromEntity(entity: NSEntityDescription) -> (sucesso: Bool, objects: NSArray){
         
         let delegate = (UIApplication.sharedApplication()).delegate as AppDelegate
         let context:NSManagedObjectContext? = delegate.managedObjectContext
         
         let request:NSFetchRequest = NSFetchRequest()
-        request.entity = description
+        request.entity = entity
         
         var error:NSError?
         var objects:NSArray? = context?.executeFetchRequest(request, error: &error)
@@ -43,6 +43,25 @@ class DataManager {
             return(false, objects!)
         }
         
+    }
+    
+    class func getManagedObjectsFromEntity(entity: NSEntityDescription, predicate:NSPredicate) -> (sucesso: Bool, objects: NSArray){
+        let delegate = (UIApplication.sharedApplication()).delegate as AppDelegate
+        let context:NSManagedObjectContext? = delegate.managedObjectContext
+        
+        let request:NSFetchRequest = NSFetchRequest()
+        request.entity = entity
+        request.predicate = predicate
+        
+        var error:NSError?
+        var objects:NSArray? = context?.executeFetchRequest(request, error: &error)
+        
+        if(error == nil){
+            return(true, objects!)
+        }else{
+            NSLog(error!.description)
+            return(false, objects!)
+        }
     }
     
 }
