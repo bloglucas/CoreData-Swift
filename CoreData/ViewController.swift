@@ -13,17 +13,18 @@ class ViewController: UIViewController {
     
     @IBAction func incluirCadastro(){
         
-        var retorno = DataManager.getAllManagedObjectsFromEntity(Cidade.entityDescription())
-        var cidade:Cidade?
-        var cadastro:Cadastro = Cadastro(entity: Cadastro.entityDescription(), insertIntoManagedObjectContext: DataManager.getContext())
+        
+        var cadastro:Cadastro = Cadastro(entity: Cadastro.entityDescription(), insertIntoManagedObjectContext: nil)
+        cadastro.nome = "Lucas"
+        cadastro.telefone = NSNumber(integer: 6181339520)
         cadastro.salvar()
         
+        var retorno = DataManager.getAllManagedObjectsFromEntity(Cidade.entityDescription())
+        var cidade:Cidade?
         if(retorno.sucesso){
             cidade = retorno.objects.objectAtIndex(0) as? Cidade
         }
         
-        cadastro.nome = "Lucas"
-        cadastro.telefone = NSNumber(integer: 6181339520)
         cadastro.cidade = cidade
         cadastro.salvar()
         
