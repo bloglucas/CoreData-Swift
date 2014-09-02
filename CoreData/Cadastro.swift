@@ -9,34 +9,14 @@
 import Foundation
 import CoreData
 
-class Cadastro: NSManagedObject {
+class Cadastro: AbstractEntity {
     
     @NSManaged var nome:String
     @NSManaged var telefone:NSNumber
     @NSManaged var cidade:Cidade?
     
-    override init(entity: NSEntityDescription!, insertIntoManagedObjectContext context: NSManagedObjectContext!) {
-        super.init(entity: entity, insertIntoManagedObjectContext: nil)
+    override class func entityDescription() -> (NSEntityDescription){
+        return DataManager.getEntity("Cadastro")
     }
     
-    class func entityDescription() -> (NSEntityDescription){
-        let entity:NSEntityDescription = DataManager.getEntity("Cadastro")
-        return entity
-    }
-    
-    func salvar(){
-        
-        let context:NSManagedObjectContext = DataManager.getContext()
-        var error:NSError?
-        
-        if (self.managedObjectContext == nil) {
-            context.insertObject(self)
-        }
-        
-        context.save(&error)
-        
-        if (error != nil){
-            NSLog(error!.description)
-        }
-    }
 }

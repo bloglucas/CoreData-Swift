@@ -17,6 +17,7 @@
 		9D26982E19A066BC00E4FE03 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D26982D19A066BC00E4FE03 /* DataManager.swift */; };
 		9D26983019A0738300E4FE03 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D26982F19A0738300E4FE03 /* CoreData.framework */; };
 		9D28AE0019A65A8F003CE509 /* Cadastro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D28ADFF19A65A8F003CE509 /* Cadastro.swift */; };
+		9DD8A33219B5405B00E3B242 /* AbstractEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD8A33119B5405B00E3B242 /* AbstractEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		9D26982D19A066BC00E4FE03 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		9D26982F19A0738300E4FE03 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		9D28ADFF19A65A8F003CE509 /* Cadastro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cadastro.swift; sourceTree = "<group>"; };
+		9DD8A33119B5405B00E3B242 /* AbstractEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				9D26980919A064C900E4FE03 /* CoreData.xcdatamodeld */,
 				9D26982B19A0664500E4FE03 /* Cidade.swift */,
 				9D28ADFF19A65A8F003CE509 /* Cadastro.swift */,
+				9DD8A33119B5405B00E3B242 /* AbstractEntity.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				9D26980B19A064C900E4FE03 /* CoreData.xcdatamodeld in Sources */,
 				9D26982C19A0664500E4FE03 /* Cidade.swift in Sources */,
 				9D26982E19A066BC00E4FE03 /* DataManager.swift in Sources */,
+				9DD8A33219B5405B00E3B242 /* AbstractEntity.swift in Sources */,
 				9D26980819A064C900E4FE03 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
