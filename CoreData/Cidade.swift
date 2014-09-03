@@ -12,6 +12,7 @@ import CoreData
 class Cidade: AbstractEntity {
     
     @NSManaged var nome:String
+    @NSManaged var cadastros:NSArray
     
     override class func entityDescription() -> (NSEntityDescription){
         return DataManager.getEntity("Cidade")

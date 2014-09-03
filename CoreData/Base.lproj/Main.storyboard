@@ -97,6 +97,15 @@
                                     <action selector="pesquisarCidade" destination="Qt9-zG-0Nc" eventType="touchUpInside" id="N2M-z9-q3l"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVv-OW-loF">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Fetched Properties">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="fetchTeste" destination="Qt9-zG-0Nc" eventType="touchUpInside" id="XgS-T3-5kt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -115,10 +124,12 @@
                             <constraint firstItem="Qkt-HT-xqY" firstAttribute="top" secondItem="Fzu-kx-1Bh" secondAttribute="bottom" constant="8" id="e3n-B7-4FJ"/>
                             <constraint firstAttribute="centerX" secondItem="XMk-cz-YGL" secondAttribute="centerX" id="ebM-Xv-BQH"/>
                             <constraint firstAttribute="centerX" secondItem="Qkt-HT-xqY" secondAttribute="centerX" id="iWP-rL-1Qb"/>
+                            <constraint firstAttribute="centerX" secondItem="UVv-OW-loF" secondAttribute="centerX" id="lWF-30-Myc"/>
                             <constraint firstItem="Qkt-HT-xqY" firstAttribute="centerX" secondItem="8rT-aP-5uK" secondAttribute="centerX" id="lWf-yC-M7N"/>
                             <constraint firstAttribute="centerX" secondItem="Ipg-aS-7Ia" secondAttribute="centerX" id="nLQ-TI-JpT"/>
                             <constraint firstItem="hwp-Rb-fRx" firstAttribute="top" secondItem="n4z-23-20p" secondAttribute="bottom" constant="8" id="pE4-ty-Crx"/>
                             <constraint firstItem="Ipg-aS-7Ia" firstAttribute="top" secondItem="hwp-Rb-fRx" secondAttribute="bottom" constant="8" id="q4e-gO-ouf"/>
+                            <constraint firstItem="UVv-OW-loF" firstAttribute="top" secondItem="hd3-3h-D97" secondAttribute="bottom" constant="1" id="szV-PO-kiG"/>
                             <constraint firstItem="n4z-23-20p" firstAttribute="top" secondItem="XMk-cz-YGL" secondAttribute="bottom" constant="24" id="zUG-dT-n5j"/>
                             <constraint firstItem="Qkt-HT-xqY" firstAttribute="centerX" secondItem="fqi-8x-NFo" secondAttribute="centerX" id="zr1-Ur-edx"/>
                         </constraints>
@@ -134,6 +145,7 @@
                                 <exclude reference="Ipg-aS-7Ia"/>
                                 <exclude reference="0xE-I6-4ZE"/>
                                 <exclude reference="hd3-3h-D97"/>
+                                <exclude reference="UVv-OW-loF"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="7af-io-Wq4"/>
@@ -148,6 +160,8 @@
                                 <exclude reference="Vg8-BG-l14"/>
                                 <exclude reference="nLQ-TI-JpT"/>
                                 <exclude reference="q4e-gO-ouf"/>
+                                <exclude reference="lWF-30-Myc"/>
+                                <exclude reference="szV-PO-kiG"/>
                                 <exclude reference="9c3-m1-slG"/>
                                 <exclude reference="ebM-Xv-BQH"/>
                                 <exclude reference="Uhx-Lb-prX"/>
@@ -171,6 +185,7 @@
                                 <include reference="Ipg-aS-7Ia"/>
                                 <include reference="0xE-I6-4ZE"/>
                                 <include reference="hd3-3h-D97"/>
+                                <include reference="UVv-OW-loF"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="7af-io-Wq4"/>
@@ -185,6 +200,8 @@
                                 <include reference="Vg8-BG-l14"/>
                                 <include reference="nLQ-TI-JpT"/>
                                 <include reference="q4e-gO-ouf"/>
+                                <include reference="lWF-30-Myc"/>
+                                <include reference="szV-PO-kiG"/>
                                 <include reference="9c3-m1-slG"/>
                                 <include reference="ebM-Xv-BQH"/>
                                 <include reference="Uhx-Lb-prX"/>

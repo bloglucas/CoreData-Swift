@@ -11,6 +11,20 @@ import CoreData
 
 class ViewController: UIViewController {
     
+    @IBAction func fetchTeste(){
+        
+        var retornoCidade = DataManager.getAllManagedObjectsFromEntity(Cidade.entityDescription())
+        var cidade = retornoCidade.objects[0] as Cidade
+        var listaCidade = cidade.cadastros
+        NSLog("No %@ existem %i cadastros",cidade.nome, listaCidade.count)
+       
+        var retornoCadastro = DataManager.getAllManagedObjectsFromEntity(Cadastro.entityDescription())
+        var cadastro = retornoCadastro.objects[0] as Cadastro
+        var listaCadastro = cadastro.rio
+        NSLog("%i",listaCadastro.count)
+        
+    }
+    
     @IBAction func incluirCadastro(){
         
         
