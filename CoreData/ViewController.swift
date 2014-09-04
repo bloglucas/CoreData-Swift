@@ -11,6 +11,20 @@ import CoreData
 
 class ViewController: UIViewController {
     
+    @IBAction func fetchRequest(){
+        var retorno = DataManager.getFromFetchRequest("FetchNomeContains")
+        if (retorno.sucesso){
+            NSLog("%i",retorno.objects.count)
+        }
+        
+        var variaveis:NSMutableDictionary = NSMutableDictionary()
+        variaveis.setObject("Lucas", forKey: "NOME")
+        var retorno2 = DataManager.getFromFetchRequest("FetchVariavel", variaveis: variaveis)
+        if (retorno2.sucesso){
+            NSLog("%i",retorno2.objects.count)
+        }
+    }
+    
     @IBAction func fetchTeste(){
         
         var retornoCidade = DataManager.getAllManagedObjectsFromEntity(Cidade.entityDescription())

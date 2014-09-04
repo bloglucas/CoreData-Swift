@@ -15,6 +15,8 @@
             <fetchRequest name="fetchedPropertyFetchRequest" entity="Cadastro" predicateString="ANY cidade == $FETCH_SOURCE"/>
         </fetchedProperty>
     </entity>
+    <fetchRequest name="FetchNomeContains" entity="Cadastro" predicateString="nome == &quot;Lucas&quot;"/>
+    <fetchRequest name="FetchVariavel" entity="Cadastro" predicateString="nome == $NOME"/>
     <elements>
         <element name="Cadastro" positionX="-54" positionY="0" width="128" height="116"/>
         <element name="Cidade" positionX="-335" positionY="5" width="128" height="101"/>
