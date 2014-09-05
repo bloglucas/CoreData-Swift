@@ -19,7 +19,7 @@ class DataManager {
         let context = delegate.managedObjectContext
         
         var error:NSError?
-        var objects:NSArray? = context?.executeFetchRequest(fetchRequest, error: &error)
+        var objects:NSArray? = context?.executeFetchRequest(fetchRequest!, error: &error)
         
         if (error == nil){
             return (true, objects!)
@@ -35,7 +35,7 @@ class DataManager {
         let context = delegate.managedObjectContext
         
         var error:NSError?
-        var objects:NSArray? = context?.executeFetchRequest(fetchRequest, error: &error)
+        var objects:NSArray? = context?.executeFetchRequest(fetchRequest!, error: &error)
         
         if (error == nil){
             return (true, objects!)
@@ -47,7 +47,7 @@ class DataManager {
     class func getEntity(entidade: String) -> (NSEntityDescription){
         let delegate = (UIApplication.sharedApplication()).delegate as AppDelegate
         let context:NSManagedObjectContext? = delegate.managedObjectContext
-        let description:NSEntityDescription = NSEntityDescription.entityForName(entidade, inManagedObjectContext: context)
+        let description:NSEntityDescription = NSEntityDescription.entityForName(entidade, inManagedObjectContext: context!)!
         
         return description
     }
